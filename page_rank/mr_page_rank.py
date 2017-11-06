@@ -1,6 +1,7 @@
 #! ../env/bin/python
 
 from mrjob.job import MRJob
+from mrjob.step import MRStep
 from mrjob.protocol import JSONValueProtocol
 
 class MRPageRank(MRJob):
@@ -49,7 +50,7 @@ class MRPageRank(MRJob):
         yield node_id, node
 
     def steps(self):
-        return ([self.mr(mapper=self.map_task, reducer=self.reduce_task)] * 
+        return ([MRStep(mapper=self.map_task, reducer=self.reduce_task)] * 
                 self.options.iterations)
 
 if __name__ == '__main__':

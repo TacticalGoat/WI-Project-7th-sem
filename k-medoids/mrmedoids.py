@@ -63,15 +63,14 @@ class MRKMedoids(MRJob):
                 f.write(','.join([str(x) for x in medoid]) + "\n")
 
     def calculate_distance(self,att1, att2):
-        try:
             (a1, b1, c1, d1) = att1[:4]
             (a1, b1, c1, d1) = (float(a1), float(b1), float(c1), float(d1))
             (a2, b2, c2, d2) = att2[:4]
-            else:
-                return math.sqrt(math.pow((a1-a2), 2) +
-                                math.pow((b1-b2), 2) +
-                                math.pow((c1-c2), 2) +
-                                math.pow((d1-d2), 2))
+            (a2, b2, c2, d2) = (float(a2), float(b2), float(c2), float(d2))
+            return math.sqrt(math.pow((a1-a2), 2) +
+                             math.pow((b1-b2), 2) +
+                             math.pow((c1-c2), 2) +
+                             math.pow((d1-d2), 2))
     #Calculate distances and classify each point
     def map_task(self, _, line):
         line = line.strip()
