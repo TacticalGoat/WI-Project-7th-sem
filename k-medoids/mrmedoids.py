@@ -9,6 +9,7 @@ class MRKMedoids(MRJob):
     _correct = 0
     _total = 0
 
+    #this needs to be done because python dont have static vars requires declaration as property and getters and setters
     @property
     def correct(self):
         return self._correct
@@ -25,6 +26,8 @@ class MRKMedoids(MRJob):
     def total(self,val):
         self._total = val
 
+    
+    #Standard config of variables 
     def configure_options(self):
         
         super(MRKMedoids,self).configure_options()
@@ -36,6 +39,8 @@ class MRKMedoids(MRJob):
         self.add_passthrough_option(
             '--c', dest='medoid_file',default='medoids.txt',type='str',
             help='The path to the centroid file')
+
+    #Static methods
     @classmethod
     def get_medoids(self):
         medoids = []
@@ -67,7 +72,7 @@ class MRKMedoids(MRJob):
                                 math.pow((b1-b2), 2) +
                                 math.pow((c1-c2), 2) +
                                 math.pow((d1-d2), 2))
-
+    #Calculate distances and classify each point
     def map_task(self, _, line):
         line = line.strip()
         params = line.split(',')
@@ -81,7 +86,7 @@ class MRKMedoids(MRJob):
             self.correct += 1
         self.total += 1
         yield cluster, params
-
+    #Calculated distance from each medoid to other medoid ans select one with least cost
     def combine_task(self, cluster, values):
         values = list(values)
         for value in values:
@@ -95,7 +100,7 @@ class MRKMedoids(MRJob):
                 index = values.index(value)
             midValue = (values[index], len(values))
         yield cluster, midValue
-
+    #Nothing special yeilds clusters
     def reduce_task(self, cluster, values):
         numbers = []
         samples = []
@@ -108,6 +113,7 @@ class MRKMedoids(MRJob):
         self.new_medoids.append(nc)
         yield cluster, nc
 
+    #Define steps 
     def steps(self):
         return [self.mr(mapper=self.map_task,
                         combiner=self.combine_task,

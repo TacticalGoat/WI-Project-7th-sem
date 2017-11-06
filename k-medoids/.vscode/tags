@@ -4,4 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+MRJob	../mrmedoids.py	/^from mrjob.job import MRJob$/;"	kind:namespace	line:2
+MRKMedoids	../mrmedoids.py	/^class MRKMedoids(MRJob):$/;"	kind:class	line:6
+_correct	../mrmedoids.py	/^    _correct = 0$/;"	kind:variable	line:9
+_total	../mrmedoids.py	/^    _total = 0$/;"	kind:variable	line:10
+calculate_distance	../mrmedoids.py	/^    def calculate_distance(self,att1, att2):$/;"	kind:member	line:60
+combine_task	../mrmedoids.py	/^    def combine_task(self, cluster, values):$/;"	kind:member	line:85
+configure_options	../mrmedoids.py	/^    def configure_options(self):$/;"	kind:member	line:28
+correct	../mrmedoids.py	/^    def correct(self):$/;"	kind:member	line:13
+correct	../mrmedoids.py	/^    def correct(self,val):$/;"	kind:member	line:17
+get_correct_percentage	../mrmedoids.py	/^    def get_correct_percentage(self):$/;"	kind:member	line:49
+get_medoids	../mrmedoids.py	/^    def get_medoids(self):$/;"	kind:member	line:40
+map_task	../mrmedoids.py	/^    def map_task(self, _, line):$/;"	kind:member	line:71
+math	../mrmedoids.py	/^import math$/;"	kind:namespace	line:3
+medoids	../mrmedoids.py	/^    medoids = []$/;"	kind:variable	line:7
 mrmedoids.py	../mrmedoids.py	1;"	kind:file	line:1
+new_medoids	../mrmedoids.py	/^    new_medoids = []$/;"	kind:variable	line:8
+reduce_task	../mrmedoids.py	/^    def reduce_task(self, cluster, values):$/;"	kind:member	line:99
+steps	../mrmedoids.py	/^    def steps(self):$/;"	kind:member	line:111
+sys	../mrmedoids.py	/^import sys$/;"	kind:namespace	line:4
+total	../mrmedoids.py	/^    def total(self):$/;"	kind:member	line:21
+total	../mrmedoids.py	/^    def total(self,val):$/;"	kind:member	line:25
+write_medoids	../mrmedoids.py	/^    def write_medoids(self):$/;"	kind:member	line:55
