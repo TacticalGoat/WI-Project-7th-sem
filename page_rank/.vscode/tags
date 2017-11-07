@@ -4,25 +4,26 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-INPUT_PROTOCOL	../mr_page_rank.py	/^    INPUT_PROTOCOL = JSONValueProtocol$/;"	kind:variable	line:7
+INPUT_PROTOCOL	../mr_page_rank.py	/^    INPUT_PROTOCOL = JSONValueProtocol$/;"	kind:variable	line:8
 JSONProtocol	../data_encoder.py	/^from mrjob.protocol import JSONProtocol$/;"	kind:namespace	line:2
-JSONValueProtocol	../mr_page_rank.py	/^from mrjob.protocol import JSONValueProtocol$/;"	kind:namespace	line:4
+JSONValueProtocol	../mr_page_rank.py	/^from mrjob.protocol import JSONValueProtocol$/;"	kind:namespace	line:5
 MRJob	../mr_page_rank.py	/^from mrjob.job import MRJob$/;"	kind:namespace	line:3
-MRPageRank	../mr_page_rank.py	/^class MRPageRank(MRJob):$/;"	kind:class	line:6
+MRPageRank	../mr_page_rank.py	/^class MRPageRank(MRJob):$/;"	kind:class	line:7
+MRStep	../mr_page_rank.py	/^from mrjob.step import MRStep$/;"	kind:namespace	line:4
 argv	../data_encoder.py	/^    from sys import argv$/;"	kind:namespace	line:15
 argv	../get_max_node.py	/^from sys import argv$/;"	kind:namespace	line:2
-configure_options	../mr_page_rank.py	/^    def configure_options(self):$/;"	kind:member	line:9
+configure_options	../mr_page_rank.py	/^    def configure_options(self):$/;"	kind:member	line:10
 d	../data_encoder.py	/^    d = {}$/;"	kind:variable	line:16
 data_encoder.py	../data_encoder.py	1;"	kind:file	line:1
 encode_node	../data_encoder.py	/^def encode_node(node_id,links=None,score=1):$/;"	kind:function	line:5
 get_max_node.py	../get_max_node.py	1;"	kind:file	line:1
 json	../data_encoder.py	/^import json$/;"	kind:namespace	line:3
 link	../data_encoder.py	/^            link = line.split()$/;"	kind:variable	line:19
-map_task	../mr_page_rank.py	/^    def map_task(self, node_id, node):$/;"	kind:member	line:21
+map_task	../mr_page_rank.py	/^    def map_task(self, node_id, node):$/;"	kind:member	line:22
 maxR	../get_max_node.py	/^                maxR=temp[0]$/;"	kind:variable	line:10
 maxS	../get_max_node.py	/^                maxS=float(temp[2][:-1])$/;"	kind:variable	line:9
 mr_page_rank.py	../mr_page_rank.py	1;"	kind:file	line:1
-reduce_task	../mr_page_rank.py	/^    def reduce_task(self, node_id, typed_values):$/;"	kind:member	line:31
-steps	../mr_page_rank.py	/^    def steps(self):$/;"	kind:member	line:51
+reduce_task	../mr_page_rank.py	/^    def reduce_task(self, node_id, typed_values):$/;"	kind:member	line:32
+steps	../mr_page_rank.py	/^    def steps(self):$/;"	kind:member	line:52
 temp	../data_encoder.py	/^            temp = {}$/;"	kind:variable	line:24
 temp	../get_max_node.py	/^        temp=line.split()$/;"	kind:variable	line:6
